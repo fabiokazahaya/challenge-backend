@@ -16,8 +16,8 @@ public class DateUtilsTest {
 	static String STRING_LOCAL_DATE_INVALIDA = "50-02-2017";
 	static String STRING_ZONED_DATE_TIME_VALIDA = "2016-10-01T14:30:37.040Z";
 	static String STRING_ZONED_DATE_TIME_INVALIDA = "2016-10/01Ts14:30:37.040Z";
-	static String STRING_BEGIN_ZONED_DATE_TIME = "2016-10-05T14:30:37.040Z";
-	static String STRING_END_ZONED_DATE_TIME = "2016-10-06T14:30:37.040Z";
+	static String STRING_BEGIN_ZONED_DATE_TIME = "2016-10-06T14:30:37.040Z";
+	static String STRING_END_ZONED_DATE_TIME = "2016-10-06T14:30:38.040Z";
 	Optional<String> optVazioValue = Optional.ofNullable("");
 	Optional<String> optNullvalue = Optional.ofNullable(null);
 	Optional<String> optString = Optional.of(STRING_LOCAL_DATE_VALIDA); 
