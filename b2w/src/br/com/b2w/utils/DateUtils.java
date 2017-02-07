@@ -46,13 +46,13 @@ public class DateUtils {
 	
 	public static void validarZonedDateTime(ZonedDateTime beginZdt, ZonedDateTime endZdt){
 		if (beginZdt.isAfter(endZdt)){
-			throw new GenericException("Data begindate e maior que finaldate, tente novamente");
+			throw new GenericException("Data begindate > finaldate, tente novamente");
 		}
 	}
 	
 	public static void validarVazioNulo(Optional<String> begindateOpt, Optional<String> finaldateOpt){
-		if (!begindateOpt.isPresent() || begindateOpt.get().isEmpty()
-				|| !finaldateOpt.isPresent() || finaldateOpt.get().isEmpty()){
+		if (!begindateOpt.isPresent() || begindateOpt.get().trim().isEmpty()
+				|| !finaldateOpt.isPresent() || finaldateOpt.get().trim().isEmpty()){
 			throw new GenericException("Data com valor nulo ou vazia, tente novamente");
 		}
 	}

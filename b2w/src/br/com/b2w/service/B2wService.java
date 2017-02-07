@@ -40,16 +40,18 @@ public class B2wService {
 		Optional<String> begindateOpt = Optional.ofNullable(begindate);
 		Optional<String> finaldateOpt = Optional.ofNullable(finaldate);
 
+		LOG.info("Validar begindate/finaldate esta vazia ou nulo");
 		DateUtils.validarVazioNulo(begindateOpt, finaldateOpt);
 		
 		LOG.info("Converter {} e {} para LocalDate.", BEGIN_DATE, FINAL_DATE);
-		LocalDate beginLocalDate = DateUtils.convertStringToLocalDate(begindate);
-		LocalDate finalLocalDate = DateUtils.convertStringToLocalDate(finaldate);
+		LocalDate beginLocalDate = DateUtils.convertStringToLocalDate(begindateOpt.get());
+		LocalDate finalLocalDate = DateUtils.convertStringToLocalDate(finaldateOpt.get());
 
 		LOG.info("Converter LocalDate {} e {} para ZonedDateTime.", beginLocalDate, finalLocalDate);
 		ZonedDateTime beginZdt = DateUtils.convertLocalDateToZonedDateTime(beginLocalDate);
 		ZonedDateTime endZdt = DateUtils.convertLocalDateToZonedDateTime(finalLocalDate);
 		
+		LOG.info("Validar begindate > finaldate");
 		DateUtils.validarZonedDateTime(beginZdt, endZdt);
 
 		LOG.info("Converter Gson Item API para Object Item");
