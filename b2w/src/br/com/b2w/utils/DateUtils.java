@@ -6,6 +6,7 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,7 +43,21 @@ public class DateUtils {
 			throw new GenericException("Erro ao converter String para ZonedDateTime.", e);
 		}
 	}
+	
+	public static void validarZonedDateTime(ZonedDateTime beginZdt, ZonedDateTime endZdt){
+		if (beginZdt.isAfter(endZdt)){
+			throw new GenericException("Data begindate e maior que finaldate, tente novamente");
+		}
+	}
+	
+	public static void validarVazioNulo(Optional<String> begindateOpt, Optional<String> finaldateOpt){
+		if (!begindateOpt.isPresent() || begindateOpt.get().isEmpty()
+				|| !finaldateOpt.isPresent() || finaldateOpt.get().isEmpty()){
+			throw new GenericException("Data com valor nulo ou vazia, tente novamente");
+		}
+	}
 }
+
 
 
 
