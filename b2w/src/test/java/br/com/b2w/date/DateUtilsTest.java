@@ -84,14 +84,20 @@ public class DateUtilsTest {
 		DateUtils.validarVazioNulo(optString, optString);
 	}
 	
+	
 	@Test
 	public void validarVazioNuloErrorVazioTest(){
-		DateUtils.validarVazioNulo(optVazioValue, optString);
+		assertThrows(GenericException.class, () -> {
+			DateUtils.validarVazioNulo(optVazioValue, optString);
+		});
 	}
+	
 	
 	@Test
 	public void validarVazioNuloErrorNullTest(){
-		DateUtils.validarVazioNulo(optNullvalue, optString);
+		assertThrows(GenericException.class, () -> {
+			DateUtils.validarVazioNulo(optNullvalue, optString);
+		});
 	}
 }
 
