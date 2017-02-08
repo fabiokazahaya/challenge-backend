@@ -1,44 +1,43 @@
 package br.com.b2w.model;
 
 public class Dimension {
-	
-	private float weight;
-	private float height;
-	private float width;
-	private float length;
-	
-	public float getWeight() {
+
+	private double weight;
+	private double height;
+	private double width;
+	private double length;
+
+	public double getWeight() {
 		return weight;
 	}
-	
-	public void setWeight(float weight) {
+
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-	
-	public float getHeight() {
+
+	public double getHeight() {
 		return height;
 	}
-	
-	public void setHeight(float height) {
+
+	public void setHeight(double height) {
 		this.height = height;
 	}
-	
-	public float getWidth() {
+
+	public double getWidth() {
 		return width;
 	}
-	
-	public void setWidth(float width) {
+
+	public void setWidth(double width) {
 		this.width = width;
 	}
-	
-	public float getLength() {
+
+	public double getLength() {
 		return length;
 	}
-	
-	public void setLength(float length) {
+
+	public void setLength(double length) {
 		this.length = length;
 	}
-	
 	
 	
 	/*
