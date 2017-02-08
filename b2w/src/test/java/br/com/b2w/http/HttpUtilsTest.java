@@ -1,4 +1,4 @@
-package br.com.b2w.date;
+package br.com.b2w.http;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;

@@ -1,4 +1,4 @@
-package br.com.b2w.date;
+package br.com.b2w.list;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

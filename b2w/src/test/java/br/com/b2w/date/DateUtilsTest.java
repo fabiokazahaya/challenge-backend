@@ -62,6 +62,7 @@ public class DateUtilsTest {
 		});
 	}
 	
+	@Test
 	public void convertStringToZonedDateTimeErrorTest(){
 		String stringZonedDateTime = STRING_ZONED_DATE_TIME_INVALIDA;
 		assertThrows(GenericException.class, () -> {
@@ -83,10 +84,12 @@ public class DateUtilsTest {
 		DateUtils.validarVazioNulo(optString, optString);
 	}
 	
+	@Test
 	public void validarVazioNuloErrorVazioTest(){
 		DateUtils.validarVazioNulo(optVazioValue, optString);
 	}
 	
+	@Test
 	public void validarVazioNuloErrorNullTest(){
 		DateUtils.validarVazioNulo(optNullvalue, optString);
 	}
